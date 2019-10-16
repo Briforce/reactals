@@ -1,7 +1,12 @@
 import React from "react";
+import Canvas from "../Canvas";
 
 const App = () => {
-  return <div>Briforce's React Boilerplate</div>;
+  return (
+    <>
+      <Canvas height={2000} width={2000} />}
+    </>
+  );
 };
 
 export default App;
