@@ -1,9 +1,9 @@
 {
-  "name": "react-boilerplate",
+  "name": "wasm-reactals",
   "version": "1.0.0",
-  "description": "A place to start a React project without CRA",
+  "description": "Messing with React, Wasm, and Fractals",
   "main": "index.js",
-  "repository": "git@github.com:Briforce/react-boilerplate.git",
+  "repository": "git@github.com:Briforce/wasm-reactals.git",
   "author": "Brian <bparker222@gmail.com>",
   "license": "MIT",
   "scripts": {
@@ -21,11 +21,11 @@
     "@babel/preset-env": "^7.2.3",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
-    "css-loader": "^2.1.1",
+    "css-loader": "^3.2.0",
     "html-webpack-plugin": "^3.2.0",
-    "less-loader": "^4.1.0",
+    "less-loader": "^5.0.0",
     "react-hot-loader": "^4.6.3",
-    "style-loader": "^0.23.1",
+    "style-loader": "^1.0.0",
     "webpack": "^4.28.4",
     "webpack-cli": "^3.2.1",
     "webpack-dev-server": "^3.1.14"
