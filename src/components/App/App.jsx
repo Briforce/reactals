@@ -1,10 +1,10 @@
 import React from "react";
-import Canvas from "../Canvas";
+import Fractal from "../Fractal";
 
 const App = () => {
   return (
     <>
-      <Canvas height={2000} width={2000} />}
+      <Fractal height={2000} width={2000} />}
     </>
   );
 };
