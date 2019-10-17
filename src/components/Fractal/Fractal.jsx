@@ -18,24 +18,40 @@ const mandelIter = (x, y, maxIter) => {
   return 0;
 };
 
-const Fractal = ({ height, width }) => {
+const Fractal = ({
+  fillColor,
+  height,
+  magnification,
+  maxIterations,
+  panX,
+  panY,
+  width
+}) => {
   const canvasRef = useRef();
 
   useEffect(() => {
-    let canvas = canvasRef.current.getContext("2d");
-    let mag = 200;
-    let panX = 3;
-    let panY = 3;
-    let maxIter = 100;
-
-    for (let x = 0; x < height; x++) {
-      for (let y = 0; y < width; y++) {
-        let m = mandelIter(x / mag - panX, y / mag - panY, maxIter);
-        canvas.fillStyle = m === 0 ? "#000" : "hsl(240, 100%, " + m + "%)";
+    const canvas = canvasRef.current.getContext("2d");
+    for (let x = 0; x < width; x++) {
+      for (let y = 0; y < height; y++) {
+        let m = mandelIter(
+          x / magnification - panX,
+          y / magnification - panY,
+          maxIterations
+        );
+        canvas.fillStyle = m === 0 ? "#000" : `hsl(${fillColor}, 100%, ${m}%)`;
         canvas.fillRect(x, y, 1, 1);
       }
     }
-  }, [canvasRef]);
+  }, [
+    canvasRef,
+    fillColor,
+    height,
+    magnification,
+    maxIterations,
+    panX,
+    panY,
+    width
+  ]);
 
   return <canvas ref={canvasRef} width={width} height={height} />;
 };
