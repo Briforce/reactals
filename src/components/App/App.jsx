@@ -4,7 +4,7 @@ import Fractal from "../Fractal";
 const App = () => {
   return (
     <>
-      <Fractal height={2000} width={2000} />}
+      <Fractal height={2000} width={2000} />
     </>
   );
 };

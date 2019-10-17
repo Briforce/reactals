@@ -24,7 +24,7 @@ const Fractal = ({ height, width }) => {
   useEffect(() => {
     let canvas = canvasRef.current.getContext("2d");
     let mag = 200;
-    let panX = 4;
+    let panX = 3;
     let panY = 3;
     let maxIter = 100;
 
