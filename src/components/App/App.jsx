@@ -5,14 +5,16 @@ import Controls from "../Controls/Controls";
 
 import "./App.less";
 
+export const defaultControls = {
+  fillColor: 0,
+  magnification: 200,
+  maxIterations: 200,
+  panX: 3,
+  panY: 3
+};
+
 const App = () => {
-  const [controls, setControls] = useState({
-    fillColor: 0,
-    magnification: 200,
-    maxIterations: 200,
-    panX: 3,
-    panY: 3
-  });
+  const [controls, setControls] = useState(defaultControls);
 
   return (
     <div className="App-Container">
