@@ -1,3 +1,4 @@
+import LabeledInput from "../LabeledInput";
 import React from "react";
 
 import "./Controls.less";
@@ -12,18 +13,20 @@ const controlLabels = [
 
 const Controls = ({ controls, setControls }) => (
   <div className="Controls-Container">
-    {controlLabels.map(({ label, dataKey }) => (
-      <span className="Controls-Input-Container" key={dataKey}>
-        <span className="Controls-Input-label">{label}</span>
-        <input
-          className="Controls-Input"
-          onChange={event =>
-            setControls({ ...controls, [dataKey]: event.target.value })
-          }
+    {controlLabels.map(({ label, dataKey }) => {
+      const onChange = newValue =>
+        setControls({ ...controls, [dataKey]: newValue });
+
+      return (
+        <LabeledInput
+          key={dataKey}
+          dataKey={dataKey}
+          label={label}
+          onChange={onChange}
           value={controls[dataKey]}
         />
-      </span>
-    ))}
+      );
+    })}
   </div>
 );
 

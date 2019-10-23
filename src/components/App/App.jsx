@@ -9,8 +9,8 @@ export const defaultControls = {
   fillColor: 0,
   magnification: 200,
   maxIterations: 200,
-  panX: 3,
-  panY: 3
+  panX: 1,
+  panY: 1
 };
 
 const App = () => {
