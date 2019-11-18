@@ -1,3 +1,3 @@
-# Wasm Reactals
+# Reactals
 
-Messing with React, Wasm, and Fractals
+Messing with React and Fractals
